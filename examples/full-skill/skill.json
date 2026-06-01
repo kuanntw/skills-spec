@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "name": "full-skill",
+  "version": "0.1.0",
+  "description": "Demonstrate a registry-ready skill package with references, scripts, assets, evaluation, capabilities, and language binding metadata.",
+  "entrypoint": "SKILL.md",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Skills Spec Maintainers"
+    }
+  ],
+  "keywords": ["example", "package", "registry-ready"],
+  "capabilities": {
+    "filesystem": {
+      "read": true,
+      "write": false
+    },
+    "network": false,
+    "commands": {
+      "execute": true,
+      "allowed": ["bash"]
+    },
+    "secrets": {
+      "reads_secrets": false,
+      "writes_secrets": false
+    }
+  },
+  "commands": {
+    "validate": {
+      "description": "Validate the example package layout.",
+      "runners": {
+        "shell": {
+          "command": "bash scripts/validate.sh"
+        }
+      }
+    }
+  },
+  "language_bindings": {
+    "typescript": {
+      "package": "@agentskills/full-skill",
+      "module": "@agentskills/full-skill",
+      "min_runtime": "node>=20"
+    },
+    "python": {
+      "package": "agentskills-full-skill",
+      "module": "agentskills_full_skill",
+      "min_runtime": "python>=3.11"
+    }
+  },
+  "update": {
+    "strategy": "semver",
+    "channel": "stable",
+    "allow_major": false,
+    "auto_update": false
+  }
+}

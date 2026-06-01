@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "skill_name": "full-skill",
+  "evals": [
+    {
+      "id": "explain-package-layout",
+      "prompt": "Explain how this full skill package is organized.",
+      "files": ["workflow.md"],
+      "expected_output": "A concise explanation of SKILL.md, skill.json, references, scripts, assets, and evals using filename-only references when mentioning files.",
+      "assertions": [
+        "Output mentions SKILL.md.",
+        "Output mentions skill.json.",
+        "Output mentions at least one resource directory."
+      ]
+    }
+  ]
+}
