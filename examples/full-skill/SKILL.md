@@ -12,9 +12,9 @@ Use this skill when a user asks for a complete package example.
 
 ## Workflow
 
-1. Read `references/workflow.md` when the user asks how a complete package is organized.
-2. Run `scripts/validate.sh` only when the user asks to validate the example package.
-3. Use `assets/templates/report.md` as a report template when producing a package review.
+1. Read `workflow.md` when the user asks how a complete package is organized.
+2. Run `validate.sh` only when the user asks to validate the example package.
+3. Use `report.md` as a report template when producing a package review.
 
 ## Output
 

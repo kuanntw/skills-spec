@@ -20,17 +20,17 @@ The Skills Package Specification defines a portable package format for AI skills
 
 ## Repository layout
 
-- `docs/core.md` defines the Agent Skills-compatible core format.
-- `docs/manifest.md` defines the `skill.json` package extension.
-- `docs/cli.md` defines reference CLI behavior.
-- `docs/language-bindings.md` defines required SDK behaviors.
-- `docs/versioning.md` defines version and update rules.
-- `docs/security.md` defines capabilities and permission handling.
-- `docs/evaluation.md` defines skill evaluation conventions.
-- `schemas/skill.schema.json` provides a JSON Schema for `skill.json`.
-- `schemas/evals.schema.json` provides a JSON Schema for evaluation files.
-- `examples/minimal-skill/` shows the smallest valid skill package.
-- `examples/full-skill/` shows a registry-ready package with scripts and evaluations.
+- `core.md` defines the Agent Skills-compatible core format.
+- `manifest.md` defines the `skill.json` package extension.
+- `cli.md` defines reference CLI behavior.
+- `language-bindings.md` defines required SDK behaviors.
+- `versioning.md` defines version and update rules.
+- `security.md` defines capabilities and permission handling.
+- `evaluation.md` defines skill evaluation conventions.
+- `skill.schema.json` provides a JSON Schema for `skill.json`.
+- `evals.schema.json` provides a JSON Schema for evaluation files.
+- `minimal-skill` shows the smallest valid skill package.
+- `full-skill` shows a registry-ready package with scripts and evaluations.
 
 ## Compatibility position
 

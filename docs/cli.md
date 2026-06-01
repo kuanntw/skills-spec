@@ -20,7 +20,7 @@ The reference command name is `skills`. Implementations may use another binary n
 | `skills update [name]` | Update one or more installed skills according to policy. |
 | `skills outdated` | Report available updates. |
 | `skills pin <name>@<version>` | Pin a skill version in the lockfile. |
-| `skills eval <path>` | Run skill evaluations if `evals/evals.json` exists. |
+| `skills eval <path>` | Run skill evaluations if `evals.json` exists. |
 
 ## Validation requirements
 
@@ -32,7 +32,7 @@ The reference command name is `skills`. Implementations may use another binary n
 4. Frontmatter has `name` and `description`.
 5. Directory name, frontmatter `name`, and manifest `name` match when `skill.json` exists.
 6. `description` is non-empty and within implementation limits.
-7. `skill.json` conforms to `schemas/skill.schema.json` when present.
+7. `skill.json` conforms to `skill.schema.json` when present.
 8. Relative paths in `entrypoint`, commands, assets, and references do not escape the package directory.
 9. Declared command runners reference existing files when they use local scripts.
 10. Version fields use SemVer.

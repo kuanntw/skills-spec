@@ -82,6 +82,19 @@ Skill packages should follow a three-stage loading model:
 
 Keep `SKILL.md` concise. Put detailed reference material in `references/`, deterministic helper code in `scripts/`, and output templates or binary resources in `assets/`.
 
+
+## User-facing file references
+
+When an agent mentions a file to a user, it should display only the file name, not the full package-relative path. Machine-readable metadata may still use relative paths for resolution, validation, and execution.
+
+Examples:
+
+| Stored resource area | User-facing reference |
+| --- | --- |
+| `references` | `workflow.md` |
+| `scripts` | `validate.sh` |
+| `assets` | `report.md` |
+
 ## Standard resource directories
 
 | Directory | Purpose |

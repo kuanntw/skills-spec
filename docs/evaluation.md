@@ -15,7 +15,7 @@ skill-name/
 
 ## Evaluation file
 
-`evals/evals.json` contains a suite of prompts, fixtures, and assertions.
+`evals.json` contains a suite of prompts, fixtures, and assertions.
 
 ```json
 {
@@ -25,12 +25,12 @@ skill-name/
     {
       "id": "detect-security-issue",
       "prompt": "Review this diff for security issues.",
-      "files": ["evals/files/diff.patch"],
-      "expected_output": "Actionable findings with severity and file references.",
+      "files": ["diff.patch"],
+      "expected_output": "Actionable findings with severity and filename-only references.",
       "assertions": [
         "Output includes at least one finding.",
         "Each finding has severity.",
-        "Each finding cites a file or line."
+        "Each finding cites a filename or line."
       ]
     }
   ]
@@ -47,4 +47,4 @@ skills eval ./code-review --baseline previous
 skills eval ./code-review --baseline without-skill
 ```
 
-Evaluation reports should include the skill version, model or runtime used, timestamp, prompts, outputs, assertion results, and pass/fail summary.
+Evaluation reports should include the skill version, model or runtime used, timestamp, prompts, outputs, assertion results, and pass/fail summary. When a report displays referenced files to a user, it should show only filenames, not full paths.
